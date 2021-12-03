@@ -4,6 +4,8 @@ from selenium import webdriver
 import unittest
 from POM_ProjectDemo.Pages.loginPage import LoginPage
 from POM_ProjectDemo.Pages.homePage import HomePage
+import HtmlTestRunner
+
 
 class LoginTest(unittest.TestCase):
 
@@ -21,14 +23,14 @@ class LoginTest(unittest.TestCase):
 
         login = LoginPage(driver)
         login.enter_username("Admin")
-        login.enter_password("admin123")
+        login.enter_password("admin123")   # also tested and generated failed result through HTML report
         login.click_login()
 
         homepage = HomePage(driver)
         homepage.click_welcome()
         homepage.click_logout()
 
-        time.sleep(4)
+        time.sleep(2)
 
     @classmethod
     def tearDownClass(cls):
@@ -37,7 +39,8 @@ class LoginTest(unittest.TestCase):
         print("Login Test successfully!")
 
 if __name__ == '__main__':
-    unittest.main()
+    unittest.main(testRunner=HtmlTestRunner.HTMLTestRunner(output='C:/Users/santo/PycharmProjects/POM_Project/reports'))
+
 
 
 
