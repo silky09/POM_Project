@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Unittest Results</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <h2 class="text-capitalize">Unittest Results</h2>
+                <p class='attribute'><strong>Start Time: </strong>2021-12-03 17:26:47</p>
+                <p class='attribute'><strong>Duration: </strong>19.77 s</p>
+                <p class='attribute'><strong>Summary: </strong>Total: 1, Pass: 0, Error: 1</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-10 col-md-10">
+                <table class='table table-hover table-responsive'>
+                    <thead>
+                        <tr>
+                            <th>__main__.LoginTest</th>
+                            <th>Status</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class='warning'>
+                            <td class="col-xs-10">test_valid_Login</td>
+                            <td class="col-xs-1">
+                                <span class="label label-warning" style="display:block;width:40px;">Error</span>
+                            </td>
+                            <td class="col-xs-1">
+                                <button class="btn btn-default btn-xs">View</button>
+                            </td>
+                        </tr>
+                        <tr style="display:none;">
+                            <td class="col-xs-9" colspan="3"><p style="color:maroon;">NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="welcome"]"}
+  (Session info: chrome=96.0.4664.45)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00F76903+2517251]
+	Ordinal0 [0x00F0F8E1+2095329]
+	Ordinal0 [0x00E12848+1058888]
+	Ordinal0 [0x00E3D448+1233992]
+	Ordinal0 [0x00E3D63B+1234491]
+	Ordinal0 [0x00E67812+1406994]
+	Ordinal0 [0x00E5650A+1336586]
+	Ordinal0 [0x00E65BBF+1399743]
+	Ordinal0 [0x00E5639B+1336219]
+	Ordinal0 [0x00E327A7+1189799]
+	Ordinal0 [0x00E33609+1193481]
+	GetHandleVerifier [0x01105904+1577972]
+	GetHandleVerifier [0x011B0B97+2279047]
+	GetHandleVerifier [0x01006D09+534521]
+	GetHandleVerifier [0x01005DB9+530601]
+	Ordinal0 [0x00F14FF9+2117625]
+	Ordinal0 [0x00F198A8+2136232]
+	Ordinal0 [0x00F199E2+2136546]
+	Ordinal0 [0x00F23541+2176321]
+	BaseThreadInitThunk [0x777FFA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77BD7A9E+286]
+	RtlGetAppContainerNamedObjectPath [0x77BD7A6E+238]
+</p><p style="color:maroon;">Traceback (most recent call last):
+  File "C:\Users\santo\PycharmProjects\POM_Project\POM_ProjectDemo\Tests\unit_test.py", line 30, in test_valid_Login
+    homepage.click_welcome()
+  File "C:\Users\santo\PycharmProjects\POM_Project\POM_ProjectDemo\Pages\homePage.py", line 11, in click_welcome
+    self.driver.find_element(By.ID, self.welcome_link_id).click()
+  File "C:\Users\santo\PycharmProjects\POM_Project\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 1244, in find_element
+    return self.execute(Command.FIND_ELEMENT, {
+  File "C:\Users\santo\PycharmProjects\POM_Project\venv\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 424, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\santo\PycharmProjects\POM_Project\venv\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 247, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":"[id="welcome"]"}
+  (Session info: chrome=96.0.4664.45)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00F76903+2517251]
+	Ordinal0 [0x00F0F8E1+2095329]
+	Ordinal0 [0x00E12848+1058888]
+	Ordinal0 [0x00E3D448+1233992]
+	Ordinal0 [0x00E3D63B+1234491]
+	Ordinal0 [0x00E67812+1406994]
+	Ordinal0 [0x00E5650A+1336586]
+	Ordinal0 [0x00E65BBF+1399743]
+	Ordinal0 [0x00E5639B+1336219]
+	Ordinal0 [0x00E327A7+1189799]
+	Ordinal0 [0x00E33609+1193481]
+	GetHandleVerifier [0x01105904+1577972]
+	GetHandleVerifier [0x011B0B97+2279047]
+	GetHandleVerifier [0x01006D09+534521]
+	GetHandleVerifier [0x01005DB9+530601]
+	Ordinal0 [0x00F14FF9+2117625]
+	Ordinal0 [0x00F198A8+2136232]
+	Ordinal0 [0x00F199E2+2136546]
+	Ordinal0 [0x00F23541+2176321]
+	BaseThreadInitThunk [0x777FFA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77BD7A9E+286]
+	RtlGetAppContainerNamedObjectPath [0x77BD7A6E+238]
+
+</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                Total: 1, Pass: 0, Error: 1 -- Duration: 19.77 s
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('td').on('click', '.btn', function(e){
+                e.preventDefault();
+                e.stopImmediatePropagation();
+                var $this = $(this);
+                var $nextRow = $this.closest('tr').next('tr');
+                $nextRow.slideToggle("fast");
+                $this.text(function(i, text){
+                    if (text === 'View') {
+                        return 'Hide';
+                    } else {
+                        return 'View';
+                    };
+                });
+            });
+        });
+    </script>
+</body>
+</html
