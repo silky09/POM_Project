@@ -1,2 +1,2 @@
 # POM_Project
-Selenium-Python
+Selenium Python Project (POM | Unit Test | HTML Reports)
