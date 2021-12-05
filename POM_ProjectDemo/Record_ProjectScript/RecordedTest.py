@@ -10,7 +10,7 @@ import unittest, time, re
 
 class TestCase1(unittest.TestCase):
     def setUp(self):
-        self.driver = webdriver.Chrome(executable_path='C:/Users/santo/PycharmProjects/POM_Project/drivers/chromedriver.exe')
+        self.driver = webdriver.Chrome(executable_path='/drivers/chromedriver.exe')
         self.driver.implicitly_wait(30)
         self.base_url = "https://www.google.com/"
         self.verificationErrors = []
