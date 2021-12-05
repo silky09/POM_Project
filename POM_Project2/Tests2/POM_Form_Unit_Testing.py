@@ -1,7 +1,7 @@
 import time
-
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+from webdriver_manager.chrome import ChromeDriverManager
 import unittest
 import HtmlTestRunner
 
@@ -9,7 +9,8 @@ class FormUnitTest(unittest.TestCase):
 
     @classmethod
     def setUpClass(cls):
-        cls.driver = webdriver.Chrome(executable_path="C:/Users/santo/PycharmProjects/POM_Project/drivers/chromedriver.exe")
+        #cls.driver = webdriver.Chrome(executable_path="C:/Users/santo/PycharmProjects/POM_Project/drivers/chromedriver.exe")
+        cls.driver = webdriver.Chrome(ChromeDriverManager().install())
         cls.driver.implicitly_wait(10)
         cls.driver.maximize_window()
 

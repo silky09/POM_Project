@@ -2,8 +2,10 @@ import time
 
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-driver = webdriver.Chrome(executable_path="C:/Users/santo/PycharmProjects/POM_Project/drivers/chromedriver.exe")
+from webdriver_manager.chrome import ChromeDriverManager
 
+#driver = webdriver.Chrome(executable_path="C:/Users/santo/PycharmProjects/POM_Project/drivers/chromedriver.exe")
+driver = webdriver.Chrome(ChromeDriverManager().install())
 driver.implicitly_wait(10)
 driver.maximize_window()
 
@@ -22,11 +24,11 @@ driver.find_element(By.XPATH,"//label[contains(text(),'Tuesday')]").click()
 driver.find_element(By.XPATH,"//label[contains(text(),'Wednesday')]").click()
 #driver.find_element(By.XPATH,"//label[contains(text(),'Monday')]").click()
 driver.find_element(By.XPATH,"//label[contains(text(),'Friday')]").click()
-#'//*[@id="q26"]/table/tbody/tr[1]/td/label'
-#driver.find_element(By.ID,"RESULT_RadioButton-9").click()
 # for select best time to call
 driver.find_element(By.XPATH,"//option[contains(text(),'Afternoon')]").click()
-time.sleep(8)
+# scroll down the page
+driver.execute_script("window.scrollTo(0,document.body.scrollHeight)")
+time.sleep(4)
 driver.find_element(By.ID,"FSsubmit").click()
 time.sleep(4)
 driver.quit()
